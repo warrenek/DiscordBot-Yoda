@@ -5,7 +5,7 @@ async function execute(client, message, args)
    if(!message.member.voiceChannel) return message.channel.send("Připoj se k táboráku.");
    //console.log(`kontrola chanu`);
 
-   if(!args[0]) return  message.channel.send("Nic si nevložil máslo.");
+   if(!args[0]) return  message.channel.send("Nic si nevložil máslo."); 
    //console.log(`kontrola argumetnu`);
 
    let validate = await ytdl.validateURL(args[0])
