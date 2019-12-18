@@ -1,0 +1,23 @@
+{
+  "name": "lumpbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "ffmpeg": "0.0.4",
+    "i": "^0.3.6",
+    "npm": "^6.13.4",
+    "opusscript": "0.0.7",
+    "prism-media": "^1.1.0",
+    "python": "0.0.4",
+    "ytdl-core": "^1.0.3",
+    "ytdl-core-discord": "^1.0.3"
+  }
+}

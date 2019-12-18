@@ -1,0 +1,16 @@
+{
+    "token": "NjU0OTU3NTQ5MDQ0NjI5NTE0.XfNGyw.i91nMKyX5rwHvTdFHOT38MZHxJU",
+    "prefix": "!",
+    "auto_reactions": {
+        "channels": [
+            "593758109730865162",
+            "593758039417421824"
+        ],
+        "positive_reaction": "plusrep",
+        "negative_reaction": "minusrep"
+    },
+    "mute": {
+        "info_channel": "593906650239467550",
+        "role": "593896043423334402"
+    }
+}
