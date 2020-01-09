@@ -9,7 +9,7 @@ function execute(client, message, args)
     _addJsonQuote (args, message.user);
 }
 
-
+  
 async function _addJsonQuote(args, user) 
 {
     var quote = args.join(' ');
