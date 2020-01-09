@@ -17,17 +17,17 @@ async function execute(client, message, args)
    //console.log(`bagruju info z : ${info}`);
 
    let connection = await message.member.voiceChannel.join();
-   console.log(`connection voice chanel ${connection}`);
+   console.log(`connection voice chanel ${args[0]}`);
    
-   connection.playOpusStream(await ytdl(url));
+   connection.playOpusStream(await ytdl(args[0]));
    //let dispetcher = await connection.playStream(ytdl(args[0], { filter: 'audioonly'}));
    //console.log(dispetcher);
 
-   var minutes = Math.floor(info.player_response.videoDetails.lengthSeconds / 60);
-   var secs = info.player_response.videoDetails.lengthSeconds % 60;
+   //var minutes = Math.floor(info.player_response.videoDetails.lengthSeconds / 60);
+   //var secs = info.player_response.videoDetails.lengthSeconds % 60;
 
    //message.channel.send(`Právě ti diskžokej: ${message.author} skladbu: ${info.title}`)
-   message.channel.send(`Právě ti diskžokej: ${message.author}`)
+   message.channel.send(`Právě ti diskžokej: ${message.author} ${icon}`)
 
 }
 

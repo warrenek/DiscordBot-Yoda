@@ -1,7 +1,7 @@
 function execute(client, message, args) 
 {
     message.channel.send(
-        `Návod pro obsluhu wBota: 
+        `Návod pro obsluhu bota Yody: 
 
     !addquote [glosa] 
     #přidá hlášku; 
