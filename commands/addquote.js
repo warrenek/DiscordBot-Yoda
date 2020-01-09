@@ -8,7 +8,7 @@ function execute(client, message, args)
 {
     _addJsonQuote (args, message.user);
 }
-
+ 
   
 async function _addJsonQuote(args, user) 
 {
