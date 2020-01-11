@@ -1,7 +1,6 @@
 const ytdl = require('ytdl-core');
 
-async function execute(client, message, args) 
-{
+async function execute(client, message, args){
    if(!message.member.voiceChannel) return message.channel.send("Připoj se k táboráku.");
    //console.log(`kontrola chanu`);
 
@@ -19,7 +18,14 @@ async function execute(client, message, args)
    let connection = await message.member.voiceChannel.join();
    console.log(`connection voice chanel ${args[0]}`);
    
-   connection.playOpusStream(await ytdl(args[0]));
+   //connection.playOpusStream(await ytdl(args[0]));
+   connection.playStream(await ytdl(args[0], { filter: 'audioonly'}))
+            //  .then((x) => {
+            //      message.member.voiceChannel.leave();
+            //  });
+
+
+
    //let dispetcher = await connection.playStream(ytdl(args[0], { filter: 'audioonly'}));
    //console.log(dispetcher);
 
@@ -27,9 +33,25 @@ async function execute(client, message, args)
    //var secs = info.player_response.videoDetails.lengthSeconds % 60;
 
    //message.channel.send(`Právě ti diskžokej: ${message.author} skladbu: ${info.title}`)
-   message.channel.send(`Právě ti diskžokej: ${message.author} ${icon}`)
+   message.channel.send(`Právě ti diskžokej: ${message.author}`)
+
+
+   //zmizni
+
+   //waait(message);
+   
 
 }
+
+
+
+
+// function waait(execute, function(err, message){
+
+//     if(!err)
+//         return message.member.voiceChannel.leave();
+
+// };
 
 
 module.exports = {
