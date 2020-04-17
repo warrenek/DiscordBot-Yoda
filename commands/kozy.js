@@ -43,7 +43,7 @@ function execute(client, message, args){
       })
       .catch(function(err){
         console.log(err)
-        message.channel.send(`Nějake se ti to posralo bobře ${err}`);
+        message.channel.send(`Nějak se ti to posralo bobře ${err}`);
       });
 
 

@@ -14,10 +14,14 @@ function execute(client, message, args)
 
     !kozy
     #vrátí (občas) nějaké to ženské ňadro 
+
+    !ass
+    #vrátí zadek
+    
+    !hmm
+    #vrátí hmm ;)
    
-    cumming sun: úprava !kozy (lepší zdroj),
-                        !hmm (překvapení)
-                        ... a další neuvěřitelný fíčury ... STAY STONED`);
+    cumming sun: neuvěřitelný fíčury ... STAY STONED`);
 }
 
 
