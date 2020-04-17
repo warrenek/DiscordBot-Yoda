@@ -13,7 +13,7 @@ async function GetListYTB(searchInput) {
        part: 'id,snippet',
        q: searchInput,
        type: 'video',
-       maxResults:10,
+       maxResults:1,
        order:'viewCount'
      })   
 };
@@ -46,32 +46,35 @@ async function execute(client, message, args){
     let urlLink = arr[0].split(';')[0];
     let urlTitle = arr[0].split(';')[1];
 
-    //oznameni :)
-    
-
     console.log(urlLink, urlTitle);
 
     let validate = await ytdl.validateURL(urlLink)
 
     if(!validate) return  message.channel.send("Nic nepřehraju....to není URL, SORRY JAKO.");
-    console.log(`validace argumetu: ${urlLink}`)
+    console.log(`validace argumetu: ${urlLink}`);
 
 
    let connection = await message.member.voiceChannel.join();
    console.log(`connection voice chanel ${connection}`);
    
-  
-   message.channel.send(args.join(' ') + ' Mother fuckers, son of a bitches and other assholes', {
+   //w8 1,5sec nez Yoda doremca a pak zacni hrat
+   setTimeout(()=> {
+    const speaking = connection.playStream(ytdl(urlLink, { filter: 'audioonly'}))
+
+    // odpoj se jak to skonci
+    speaking.on('speaking', async speaking => {
+        if(!speaking) {
+         connection.disconnect();
+        }
+    });
+   },1500);
+
+
+   message.channel.send(args.join(' ') + ' mother fuckers', {
     tts: true
-   }).then(connection.playStream(await ytdl(urlLink, { filter: 'audioandvideo'})));
-   
-   message.member.voiceChannel.setTopic("Disko trisko","jedééém ať se práší za kočárem");
-   //let dispetcher = await connection.playStream(ytdl(args[0], { filter: 'audioonly'}));
-   //console.log(dispetcher);
+   })
 
-   
-   message.channel.send(`Právě diskžokej: ${message.author} skladbu: ${urlTitle} hraje ti. [${urlLink.substring(0, 50)+'...'}]`);   
-
+   message.channel.send(`Právě diskžokej: ${message.author} skladbu: ${urlTitle.substring(0, 35)+'...'} hraje ti. [${urlLink}]`);   
 }
 
 module.exports = {
