@@ -4,23 +4,19 @@ function execute(client, message, args)
         `Návod pro obsluhu bota Yody: 
 
     !addquote [glosa] 
-    #přidá hlášku; 
-    ---------------------------------------------------------------------------------------------------------            
+    #přidá hlášku;             
     !quote 
-    #vrátí náhodnej sranec co tu kdy někdo vyplodil a oběžoval se u toho obtěžovat našeho Yodu
-    ---------------------------------------------------------------------------------------------------------            
+    #vrátí náhodnej sranec co tu kdy někdo vyplodil a oběžoval se u toho obtěžovat našeho Yodu     
     !quotestat
     #vrátí naprosto skoro přesnej počet přidaných vogonských poezií
-
     !kozy
     #vrátí (občas) nějaké to ženské ňadro 
-
     !ass
     #vrátí zadek
-    
     !hmm
     #vrátí hmm ;)
-   
+    !reset
+    #resetne obrazovku od úchyláren
     cumming sun: neuvěřitelný fíčury ... STAY STONED`);
 }
 
