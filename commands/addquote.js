@@ -33,7 +33,7 @@ async function _addJsonQuote(args, user)
       
        fs.writeFile(pathQuote, JSON.stringify(quotes), 'utf8', () => 
        {
-           console.log('INFO: Vytvářím soubor pro hlášky.');
+           console.log('INFO: Zapisuju hlášku.');
        });
 
     });

@@ -11,8 +11,13 @@ function execute(client, message, args)
     ---------------------------------------------------------------------------------------------------------            
     !quotestat
     #vrátí naprosto skoro přesnej počet přidaných vogonských poezií
+
+    !kozy
+    #vrátí (občas) nějaké to ženské ňadro 
    
-    cumming sun: !hrej !strilej, !foukninatupistalu a další neuvěřitelný fíčury ... STAY STONED`);
+    cumming sun: úprava !kozy (lepší zdroj),
+                        !hmm (překvapení)
+                        ... a další neuvěřitelný fíčury ... STAY STONED`);
 }
 
 
