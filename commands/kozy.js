@@ -1,7 +1,6 @@
 
 const rp = require('request-promise');
 const $ = require('cheerio');
-const url = 'http://porngif.cz/index.php?k=tits';
 const urlTwo = 'http://porngif.top/index.php?k=tits'
 
 /*                    RETURN A RANDOM KOZY ;-)                            */
@@ -11,7 +10,7 @@ function execute(client, message, args){
   rp(urlTwo)
       .then(function(html){
 
-        console.log('start url TWO')
+        console.log('start url kozy')
         const counterTwo = $('div > img',html).length
         console.log(counterTwo)
 
@@ -35,8 +34,8 @@ function execute(client, message, args){
           }
          }
 
-         message.channel.send(`Našel sem ${boobsUrlTwo.length} koziček... Z LEPSIHO ZDROJE`);
-         message.channel.send(boobsUrlTwo[getRandomInt(boobsUrlTwo.length-1)]);// zasraly pole a jeho pocitani... vis jak :D
+         message.channel.send(`Našel sem ${boobsUrlTwo.length} koziček... `);
+         message.channel.send(boobsUrlTwo[getRandomInt(boobsUrlTwo.length-1)].replace(/\s/g, '%'));// zasraly pole a jeho pocitani... vis jak :D
          console.log(`pocet gifu 2:${boobsUrlTwo.length}`);
          console.log(`pole 2: ${boobsUrlTwo}`)
 
